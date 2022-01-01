@@ -37,12 +37,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/CPMediaSearchBot_Tutorial')
+            InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('📢 𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/CPMediaSearchBot_Tutorial')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"𝖳𝗁𝖺𝗇𝗄 𝗒𝗈𝗎 𝖥𝗈𝗋 𝖠𝖽𝖽𝗂𝗇𝗀 𝖬𝖾 𝖨𝗇 {message.chat.title} ❣️\n\n𝖨𝖿 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾 𝖺𝗇𝗒 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇𝗌 & 𝖽𝗈𝗎𝖻𝗍𝗌 𝖺𝖻𝗈𝗎𝗍 𝗎𝗌𝗂𝗇𝗀 𝗆𝖾 𝖼𝗈𝗇𝗍𝖺𝖼𝗍 𝗌𝗎𝗉𝗉𝗈𝗋𝗍.",
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
@@ -51,7 +51,7 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+            temp.MELCOW['welcome'] = await message.reply(f"𝖧𝖾𝗒 , {u.mention}, 𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -220,7 +220,7 @@ async def unban_a_user(bot, message):
     except PeerIdInvalid:
         return await message.reply("This is an invalid user, make sure ia have met him before.")
     except IndexError:
-        return await message.reply("Thismight be a channel, make sure its a user.")
+        return await message.reply("This might be a channel, make sure its a user.")
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
