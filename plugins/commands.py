@@ -18,10 +18,10 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/CPMediaSearchBot_Tutorial')
+                InlineKeyboardButton('🤖 𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/CPMediaSearchBot_Tutorial')
             ],
             [
-                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -38,10 +38,10 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
             [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat='')
+            InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁', switch_inline_query_current_chat='')
             [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
+            InlineKeyboardButton('👽 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -66,7 +66,7 @@ async def start(client, message):
         ]
 
         if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{message.command[1]}")])
+            btn.append([InlineKeyboardButton("🔄 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**Please Join My Updates Channel to use this Bot!**",
@@ -77,10 +77,10 @@ async def start(client, message):
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
             [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat='')
+            InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁', switch_inline_query_current_chat='')
             [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
+            InlineKeyboardButton('👽 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -157,7 +157,7 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...⏳", quote=True)
+        msg = await message.reply("𝖯𝗋𝗈𝖼𝖾𝗌𝗌𝗂𝗇𝗀...⏳", quote=True)
     else:
         await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
@@ -208,12 +208,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="YES", callback_data="autofilter_delete"
+                        text="𝖸𝖤𝖲", callback_data="autofilter_delete"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="CANCEL", callback_data="close_data"
+                        text="𝖢𝖠𝖭𝖢𝖤𝖫", callback_data="close_data"
                     )
                 ],
             ]
